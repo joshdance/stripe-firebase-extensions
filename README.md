@@ -1,18 +1,38 @@
-# Stripe Firebase Extensions
+# Gem Dropping Game
 
-This repository contains the source code for Firebase Extensions that enable payment functionality. Created and tested by Stripe, these official Stripe Firebase extensions are reliable and secure. To learn more about Firebase Extensions, including how to install them in your Firebase projects, visit the [Firebase documentation](https://firebase.google.com/docs/extensions).
+A simple Three.js game where you drop colorful gems and watch them pile up with realistic physics and satisfying tinkle sounds.
 
-Each directory in this repo contains the source code for the extension and a README to explain how the extension works, including information about the enabled APIs, resources created, and the access granted to the extension.
+## How to Play
 
-## Extension Directory
+1. Open `index.html` in a web browser
+2. Press keyboard keys to spawn gems:
+   - **A** - Drop a red gem
+   - **B** - Drop a green gem
+   - **C** - Drop a purple gem
 
-- [Explore all Firebase Extensions](https://firebase.google.com/products/extensions)
+## Features
 
-This repository includes the source code for the following extensions:
+- 3D rendered gems using Three.js
+- Realistic physics simulation (gravity, bouncing, gem-to-gem collisions)
+- Procedurally generated crystal tinkle sounds on impact
+- Gems pile up naturally at the bottom
+- Beautiful lighting with shadows and glow effects
 
-1. Stripe backend for web, mobile, and subscription payments
-    - [Homepage](https://firebase.google.com/products/extensions/firestore-stripe-payments)
-    - [Source code](./firestore-stripe-payments)
-1. Send invoices using Stripe
-    - [Homepage](https://firebase.google.com/products/extensions/firestore-stripe-invoices)
-    - [Source code](./firestore-stripe-invoices)
+## Running the Game
+
+Simply open the `index.html` file in any modern web browser. No build step or server required - everything runs client-side using ES modules from CDN.
+
+```bash
+# Option 1: Open directly
+open index.html
+
+# Option 2: Use a local server (for development)
+python -m http.server 8000
+# Then visit http://localhost:8000
+```
+
+## Technologies Used
+
+- Three.js - 3D rendering
+- Web Audio API - Procedural sound generation
+- Custom physics engine - Collision detection and response
